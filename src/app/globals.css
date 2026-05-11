@@ -167,3 +167,23 @@ small, .text-small {
   background-color: var(--color-gold-light);
   transform: translateY(-1px);
 }
+
+/* ─── Responsive helpers ─── */
+.hidden-mobile { display: flex; }
+.show-mobile   { display: none; }
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+  .show-mobile   { display: flex !important; }
+}
+
+/* Footer grid — 1 col mobile → 5 col desktop */
+.footer-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  }
+}
