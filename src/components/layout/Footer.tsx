@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const navColumns = [
   {
@@ -87,18 +88,14 @@ export default function Footer() {
         >
           {/* Brand column */}
           <div>
-            <Link
-              href="/"
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "2rem",
-                color: "var(--color-cream)",
-                textDecoration: "none",
-                display: "block",
-                marginBottom: "var(--space-3)",
-              }}
-            >
-              השיבנו
+            <Link href="/" style={{ textDecoration: "none", display: "inline-block", marginBottom: "var(--space-3)" }}>
+              <Image
+                src="/images/logo.png"
+                alt="השיבנו — לומדים באהבה"
+                width={160}
+                height={60}
+                style={{ height: "52px", width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+              />
             </Link>
             <p
               style={{

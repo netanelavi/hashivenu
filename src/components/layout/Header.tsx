@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navLinks = [
@@ -39,18 +40,15 @@ export default function Header() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "1.5rem",
-            color: "var(--color-dark)",
-            textDecoration: "none",
-            fontWeight: 400,
-            lineHeight: 1,
-          }}
-        >
-          השיבנו
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <Image
+            src="/images/logo.png"
+            alt="השיבנו — לומדים באהבה"
+            width={160}
+            height={60}
+            style={{ height: "48px", width: "auto", objectFit: "contain" }}
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
